@@ -1,70 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> This breaks the mobile version, I'll fix this in the next update - Yunexiz -->
+    <meta name="description" content="Stefan's website." />
+    <meta property="og:title" content="Stefan" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lungustefan.ro/" />
+    <meta property="og:description" content="Stefan's website." />
+    <meta name="theme-color" content="#FFAA00" />
+    <title>Stefan</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Stefan's website." />
-  <meta property="og:title" content="Stefan" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lungustefan.ro/" />
-  <meta property="og:description" content="Stefan's website." />
-  <meta name="theme-color" content="#FFAA00" />
-  <title>Stefan</title>
+    <link rel="/favicon.ico" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="/scripts/modal.js" defer></script>
+    <script src="/scripts/australia.js" defer></script>
+  </head>
 
-  <link rel="/favicon.ico" href="" type="image/x-icon" />
-  <!-- <link rel="stylesheet" href="styles/uwu.css" /> -->
-  <link rel="stylesheet" href="styles/main.css" />
-</head>
-
-<body class="container">
-
-  <div class="header">
-    <h1>Stefan</h1>
-    <img src="assets/pfp.png" alt="my pfp" class="pfp">
-  </div>
-
-  <p class="links">
-    <a href="http://github.com/lungustefan">github</a> • 
-    <a href="http://discord.com/users/753179409682399332">discord</a> • 
-    <a href="https://open.spotify.com/user/31y7nlasvptiqhxetzdvue42bn2e">spotify</a>
-  </p>
-
-  <hr class="divider">
-
-  <p>
-    Romanian student. I'm a system administrator for <a href="https://byteshield.ro/">ByteShield</a>.<br>
-    I run a <a href="https://cdn.lungustefan.ro">CDN</a> with no data limits.
-  </p>
-
-  <h2 class="glitchy">Projects</h2>
-  <p>Here are the projects that I've worked on.</p>
-  <ul>
-    <li><a href="https://cdn.lungustefan.ro">CDN</a></li>
-    <li>My <a href="https://lungustefan.systems">status page</a></li>
-  </ul>
-  <p class="dim">Other than that, I guess, I am kinda useless.</p>
-
-  <div class="footer">
-    Copyright 2025 Stefan |
-    <button id="openModalBtn">ipv6 certification</button> |
-    Made with 💖 by <a href="http://orangc.net">orangc</a>.
-  </div>
-
-  <!-- Modal -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <h2>ipv6 certification</h2>
-      <img src="//ipv6.he.net/certification/create_badge.php?pass_name=LunguStefan&amp;badge=3"
-        style="border: 0; width: 229px; height: 137px"
-        alt="IPv6 Certification Badge for LunguStefan" />
+  <body>
+    <div class="header">
+      <h1 class="title">Lungu Stefan</h1>
+      <img src="assets/pfp.png" alt="my pfp" class="pfp" />
     </div>
-  </div>
+    <p class="introduction">
+      Hey! I'm Stefan, a Romanian student. I'm also a developer and make
+      projects with my code.
+    </p>
 
-  <script src="scripts/modal.js"></script>
-  <script src="scripts/australia.js"></script>
-  <p class="hidden transform rotate-180"></p>
+    <ul class="links">
+      <li><a href="http://github.com/lungustefan">Github</a></li>
+      <li>
+        <a href="http://discord.com/users/753179409682399332">Discord</a>
+      </li>
+      <li>
+        <a href="https://open.spotify.com/user/31y7nlasvptiqhxetzdvue42bn2e"
+          >Spotify</a
+        >
+      </li>
+    </ul>
 
-</body>
+    <hr />
 
+    <h2 class="title">Projects</h2>
+    <p class="introduction">These are projects that I've worked on.</p>
+    <ul class="links">
+      <li>
+        I run a <a href="https://cdn.lungustefan.ro">CDN</a> with no limits.
+      </li>
+      <li>This is my <a href="https://lungustefan.systems">Status Page</a>.</li>
+    </ul>
+    <p class="uselessness">Other than that, I guess I'm kinda useless.</p>
+
+    <div class="footer">
+      Copyright 2025 Lungu Stefan. All rights reserved.
+      <a id="openModal">IPv6 Certification</a>
+    </div>
+
+    <!-- IPv6 Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>IPv6 Certification</h2>
+        <img
+          src="//ipv6.he.net/certification/create_badge.php?pass_name=LunguStefan&amp;badge=3"
+          style="border: 0; width: 229px; height: 137px"
+          alt="IPv6 Certification Badge for LunguStefan"
+        />
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,118 +1,123 @@
-/* uwu-glitch.css – Stefan's Glitched Terminal Theme */
+:root {
+  --primary-accent: #51e0b5;
+  --secondary-accent: #55f5c5;
+  --glitch-animation: glitch 1s infinite;
+}
+
+* {
+  margin: 0;
+}
+
 body {
-    background-color: #111; /* Match maintanance.html */
-    color: #eee; /* Match maintanance.html */
-    font-family: "Courier New", monospace;
-    line-height: 1.5;
-    padding: 2rem;
-    text-shadow: 0 0 2px #00ffe0;
+  background-color: #111;
+  color: #eee;
+  font-family: "Courier New", monospace;
+  padding: 2rem;
 }
 
 a {
-    color: #00ffff;
-    text-decoration: none;
-    border-bottom: 1px dashed #00ffff;
+  color: var(--primary-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--secondary-accent);
 }
 
 a:hover {
-    color: #ff00ff;
-    border-bottom: 1px solid #ff00ff;
-}
-
-.container {
-    max-width: 768px;
-    margin: 0 auto;
+  animation: var(--glitch-animation);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-size: 5vh;
+  animation: var(--glitch-animation);
+  width: 90%;
+  margin: 1vh 0;
 }
 
 .pfp {
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
-    border: 2px solid #00ffcc;
+  border-radius: 50%;
+  width: 15vh;
+  height: 15vh;
+  border: 2px solid var(--primary-accent);
+}
+
+.introduction {
+  font-size: 3vh;
+  width: 70vw;
 }
 
 .links {
-    margin-top: 0.5rem;
-    font-size: 1rem;
+  margin: 1vh 0;
+  font-size: 2.5vh;
 }
 
-.divider {
-    margin: 1.5rem 0;
-    border: none;
-    border-top: 1px dashed #00ffcc;
+hr {
+  margin: 2vh 0;
+  border: none;
+  border-top: 1px dashed var(--primary-accent);
 }
 
-.glitchy {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    animation: glitch 1s infinite;
-}
-
-.dim {
-    opacity: 0.7;
+.uselessness {
+  opacity: 0.7;
+  margin-top: 2vh;
+  font-size: 2.5vh;
 }
 
 .footer {
-    margin-top: 10rem;
-    font-size: 0.8rem;
-    color: #ccc;
+  position: absolute;
+  bottom: 5%;
+  font-size: 2.5vh;
+  color: #ccc;
 }
 
-/* IPv6 Modal Button */
-#openModalBtn {
-    background: none;
-    color: #00ffff;
-    border: none;
-    padding: 0;
-    font-family: "Courier New", monospace;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: underline;
-    text-shadow: none;
+#openModal {
+  cursor: pointer;
 }
 
-#openModalBtn:hover {
-    color: #ff00ff;
-    text-decoration: underline;
-}
-
-/* Modal */
 .modal {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.8); /* Darker background */
-    backdrop-filter: blur(4px);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  backdrop-filter: blur(4px);
 }
 
 .modal-content {
-    background: #222;
-    padding: 1.5rem;
-    border: 2px solid #00ffcc;
-    border-radius: 0.5rem;
-    max-width: 400px;
-    text-align: center;
-    color: #eee;
-    text-shadow: 0 0 2px #00ffe0;
+  background: #222;
+  padding: 1.5rem;
+  border: 2px solid var(--primary-accent);
+  border-radius: 8px;
+  max-width: 80%;
+  text-align: center;
+  color: #eee;
+  animation: var(--glitch-animation);
 }
 
-.hidden {
-    display: none;
+.modal.hidden {
+  /* I've optionally made it only apply to modal classes, change to just .hidden for anything */
+  display: none;
 }
 
-/* Glitch Animation */
 @keyframes glitch {
-    0% { text-shadow: 2px 0 red; }
-    25% { text-shadow: -2px 0 blue; }
-    50% { text-shadow: 2px 0 green; }
-    75% { text-shadow: -2px 0 purple; }
-    100% { text-shadow: 2px 0 red; }
+  0% {
+    text-shadow: 2px 0 red;
+  }
+  25% {
+    text-shadow: -2px 0 blue;
+  }
+  50% {
+    text-shadow: 2px 0 green;
+  }
+  75% {
+    text-shadow: -2px 0 purple;
+  }
+  100% {
+    text-shadow: 2px 0 red;
+  }
 }
