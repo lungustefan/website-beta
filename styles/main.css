@@ -1,0 +1,118 @@
+/* uwu-glitch.css – Stefan's Glitched Terminal Theme */
+body {
+    background-color: #111; /* Match maintanance.html */
+    color: #eee; /* Match maintanance.html */
+    font-family: "Courier New", monospace;
+    line-height: 1.5;
+    padding: 2rem;
+    text-shadow: 0 0 2px #00ffe0;
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+    border-bottom: 1px dashed #00ffff;
+}
+
+a:hover {
+    color: #ff00ff;
+    border-bottom: 1px solid #ff00ff;
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pfp {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    border: 2px solid #00ffcc;
+}
+
+.links {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.divider {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 1px dashed #00ffcc;
+}
+
+.glitchy {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    animation: glitch 1s infinite;
+}
+
+.dim {
+    opacity: 0.7;
+}
+
+.footer {
+    margin-top: 10rem;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* IPv6 Modal Button */
+#openModalBtn {
+    background: none;
+    color: #00ffff;
+    border: none;
+    padding: 0;
+    font-family: "Courier New", monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+#openModalBtn:hover {
+    color: #ff00ff;
+    text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8); /* Darker background */
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: #222;
+    padding: 1.5rem;
+    border: 2px solid #00ffcc;
+    border-radius: 0.5rem;
+    max-width: 400px;
+    text-align: center;
+    color: #eee;
+    text-shadow: 0 0 2px #00ffe0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+    0% { text-shadow: 2px 0 red; }
+    25% { text-shadow: -2px 0 blue; }
+    50% { text-shadow: 2px 0 green; }
+    75% { text-shadow: -2px 0 purple; }
+    100% { text-shadow: 2px 0 red; }
+}
