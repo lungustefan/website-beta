@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (isUpsideDown) {
       document.body.style.transform = "rotate(180deg)";
+      document.getElementById("big-spider").style.display = "block";
     }
 
     if (!urlParams.has("australia-is-upside-down")) {
