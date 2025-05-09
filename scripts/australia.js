@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const isUpsideDown = urlParams.get("australia-is-upside-down") === "true";
 
     if (isUpsideDown) {
-      document.body.style.transform = "rotate(180)";
+      document.body.style.transform = "rotate(180deg)";
     }
 
     if (!urlParams.has("australia-is-upside-down")) {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const data = await response.json();
 
       if (data.country === "AU") {
-        document.body.style.transform = "rotate(180)";
+        document.body.style.transform = "rotate(180deg)";
         urlParams.set("australia-is-upside-down", "true");
         window.history.replaceState(
           {},
